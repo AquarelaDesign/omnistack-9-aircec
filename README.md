@@ -1,2 +1,2 @@
-# omnistack-9-aircec
-Semana Omnistack #9 Rocketseat - AirCeC
+# omnistack-9-aircnc
+Semana Omnistack #9 Rocketseat - AirCnC
