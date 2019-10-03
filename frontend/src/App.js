@@ -6,16 +6,15 @@ import logo from './assets/logo.svg'
 
 function App() {
   const [email, setEmail] = useState('')
+  console.log(email)
 
   async function handleSubmit(event) {
     event.preventDefault()
-    console.log(email)
 
     const response = await api.post('/sessions', { email })
 
+    console.log(response.data)
     const { _id } = response.data
-
-    //console.log(_id)
   }
   
   return (
