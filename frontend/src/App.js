@@ -9,10 +9,13 @@ function App() {
 
   async function handleSubmit(event) {
     event.preventDefault()
+    console.log(email)
 
     const response = await api.post('/sessions', { email })
 
-    console.log(response)
+    const { _id } = response.data
+
+    //console.log(_id)
   }
   
   return (
