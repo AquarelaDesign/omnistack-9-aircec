@@ -6,11 +6,10 @@ import logo from './assets/logo.svg'
 
 function App() {
   const [email, setEmail] = useState('')
-  console.log(email)
 
   async function handleSubmit(event) {
-    event.preventDefault()
-
+    event.preventDefault();
+    
     const response = await api.post('/sessions', { email })
 
     console.log(response.data)
@@ -19,7 +18,9 @@ function App() {
   
   return (
     <div className="container">
+      
       <img src={logo} alt="AirCnC"/>
+      
       <div className="content">
         <p>
           Ofereça <strong>spots</strong> para programadores e encontre <strong>talentos</strong> para sua empresa
@@ -34,12 +35,12 @@ function App() {
             value={email}
             onChange={event => setEmail(event.target.value)}
           />
+          <button className="btn" type="submit">Entrar</button>
         </form>
 
-        <button className="btn" type="submit">Entrar</button>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
